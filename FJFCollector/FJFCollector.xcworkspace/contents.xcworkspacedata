@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:FJFQRCode/FJFQRCode.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:HttpRequest_AFN/HttpRequest_AFN.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FJFCollector.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
