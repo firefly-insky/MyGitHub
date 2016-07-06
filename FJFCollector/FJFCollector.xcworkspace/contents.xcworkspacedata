@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FJFQRCode/FJFQRCode.xcodeproj">
+      location = "group:FJFNetWorkManager/FJFNetWorkManager.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:HttpRequest_AFN/HttpRequest_AFN.xcodeproj">
+      location = "group:FJFQRCode/FJFQRCode.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:FJFCollector.xcodeproj">

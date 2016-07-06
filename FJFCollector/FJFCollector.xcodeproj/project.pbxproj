@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8218A8EE0CF2F6EE1BBDB3B7 /* libPods-FJFCollector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 267D165949F3F6F62C873707 /* libPods-FJFCollector.a */; };
+		99561CDF1D2CA98300FD9A42 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99561CDD1D2CA98300FD9A42 /* mainViewController.m */; };
+		99561CE01D2CA98300FD9A42 /* mainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99561CDE1D2CA98300FD9A42 /* mainViewController.xib */; };
 		995C4A071D2122DF00853C46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 995C4A061D2122DF00853C46 /* main.m */; };
 		995C4A0A1D2122DF00853C46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 995C4A091D2122DF00853C46 /* AppDelegate.m */; };
 		995C4A0D1D2122DF00853C46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995C4A0C1D2122DF00853C46 /* ViewController.m */; };
@@ -39,6 +41,9 @@
 /* Begin PBXFileReference section */
 		267D165949F3F6F62C873707 /* libPods-FJFCollector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FJFCollector.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2B85CC926F997FDB8D91FC /* Pods-FJFCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FJFCollector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FJFCollector/Pods-FJFCollector.debug.xcconfig"; sourceTree = "<group>"; };
+		99561CDC1D2CA98300FD9A42 /* mainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainViewController.h; sourceTree = "<group>"; };
+		99561CDD1D2CA98300FD9A42 /* mainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainViewController.m; sourceTree = "<group>"; };
+		99561CDE1D2CA98300FD9A42 /* mainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mainViewController.xib; sourceTree = "<group>"; };
 		995C4A021D2122DF00853C46 /* FJFCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FJFCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995C4A061D2122DF00853C46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		995C4A081D2122DF00853C46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,7 +61,6 @@
 		995C4A2A1D2122DF00853C46 /* FJFCollectorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJFCollectorUITests.m; sourceTree = "<group>"; };
 		995C4A2C1D2122DF00853C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		997EDD4B1D2BB6B500675BC2 /* libFJFQRCode.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFJFQRCode.a; path = "../../../Library/Developer/Xcode/DerivedData/FJFCollector-azaggyrxzdsqljeomouytzaglgnj/Build/Products/Debug-iphoneos/libFJFQRCode.a"; sourceTree = "<group>"; };
-		997EDD4D1D2BB8AB00675BC2 /* FJFQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJFQRCode.h; path = FJFQRCode/FJFQRCode/FJFQRCode.h; sourceTree = SOURCE_ROOT; };
 		D5F13F5DC19BABE974E126B5 /* Pods-FJFCollector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FJFCollector.release.xcconfig"; path = "Pods/Target Support Files/Pods-FJFCollector/Pods-FJFCollector.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +134,6 @@
 		995C4A041D2122DF00853C46 /* FJFCollector */ = {
 			isa = PBXGroup;
 			children = (
-				997EDD4D1D2BB8AB00675BC2 /* FJFQRCode.h */,
 				995C4A081D2122DF00853C46 /* AppDelegate.h */,
 				995C4A091D2122DF00853C46 /* AppDelegate.m */,
 				995C4A0B1D2122DF00853C46 /* ViewController.h */,
@@ -140,6 +143,9 @@
 				995C4A131D2122DF00853C46 /* LaunchScreen.storyboard */,
 				995C4A161D2122DF00853C46 /* Info.plist */,
 				995C4A051D2122DF00853C46 /* Supporting Files */,
+				99561CDC1D2CA98300FD9A42 /* mainViewController.h */,
+				99561CDD1D2CA98300FD9A42 /* mainViewController.m */,
+				99561CDE1D2CA98300FD9A42 /* mainViewController.xib */,
 			);
 			path = FJFCollector;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				995C4A151D2122DF00853C46 /* LaunchScreen.storyboard in Resources */,
 				995C4A121D2122DF00853C46 /* Assets.xcassets in Resources */,
 				995C4A101D2122DF00853C46 /* Main.storyboard in Resources */,
+				99561CE01D2CA98300FD9A42 /* mainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +363,7 @@
 				995C4A0D1D2122DF00853C46 /* ViewController.m in Sources */,
 				995C4A0A1D2122DF00853C46 /* AppDelegate.m in Sources */,
 				995C4A071D2122DF00853C46 /* main.m in Sources */,
+				99561CDF1D2CA98300FD9A42 /* mainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

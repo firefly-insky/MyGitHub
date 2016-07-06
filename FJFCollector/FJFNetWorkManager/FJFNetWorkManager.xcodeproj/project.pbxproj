@@ -7,134 +7,132 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		995C4A451D21246800853C46 /* HttpRequest_AFN.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 995C4A441D21246800853C46 /* HttpRequest_AFN.h */; };
-		995C4A471D21246800853C46 /* HttpRequest_AFN.m in Sources */ = {isa = PBXBuildFile; fileRef = 995C4A461D21246800853C46 /* HttpRequest_AFN.m */; };
-		995C4A541D21258D00853C46 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 995C4A531D21258D00853C46 /* libAFNetworking.a */; };
+		99561CEE1D2CACA800FD9A42 /* FJFNetWorkManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99561CED1D2CACA800FD9A42 /* FJFNetWorkManager.h */; };
+		99561CF01D2CACA800FD9A42 /* FJFNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99561CEF1D2CACA800FD9A42 /* FJFNetWorkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		995C4A3F1D21246800853C46 /* CopyFiles */ = {
+		99561CE81D2CACA800FD9A42 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				995C4A451D21246800853C46 /* HttpRequest_AFN.h in CopyFiles */,
+				99561CEE1D2CACA800FD9A42 /* FJFNetWorkManager.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		995C4A411D21246800853C46 /* libHttpRequest_AFN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHttpRequest_AFN.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		995C4A441D21246800853C46 /* HttpRequest_AFN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpRequest_AFN.h; sourceTree = "<group>"; };
-		995C4A461D21246800853C46 /* HttpRequest_AFN.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpRequest_AFN.m; sourceTree = "<group>"; };
-		995C4A531D21258D00853C46 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "../../../../Library/Developer/Xcode/DerivedData/FJFCollector-azaggyrxzdsqljeomouytzaglgnj/Build/Products/Debug-iphoneos/AFNetworking/libAFNetworking.a"; sourceTree = "<group>"; };
+		99561CEA1D2CACA800FD9A42 /* libFJFNetWorkManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFJFNetWorkManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		99561CED1D2CACA800FD9A42 /* FJFNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJFNetWorkManager.h; sourceTree = "<group>"; };
+		99561CEF1D2CACA800FD9A42 /* FJFNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJFNetWorkManager.m; sourceTree = "<group>"; };
+		99561CF61D2CACD300FD9A42 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		995C4A3E1D21246800853C46 /* Frameworks */ = {
+		99561CE71D2CACA800FD9A42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				995C4A541D21258D00853C46 /* libAFNetworking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		995C4A381D21246800853C46 = {
+		99561CE11D2CACA700FD9A42 = {
 			isa = PBXGroup;
 			children = (
-				995C4A531D21258D00853C46 /* libAFNetworking.a */,
-				995C4A431D21246800853C46 /* HttpRequest_AFN */,
-				995C4A421D21246800853C46 /* Products */,
+				99561CEC1D2CACA800FD9A42 /* FJFNetWorkManager */,
+				99561CEB1D2CACA800FD9A42 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		995C4A421D21246800853C46 /* Products */ = {
+		99561CEB1D2CACA800FD9A42 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				995C4A411D21246800853C46 /* libHttpRequest_AFN.a */,
+				99561CEA1D2CACA800FD9A42 /* libFJFNetWorkManager.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		995C4A431D21246800853C46 /* HttpRequest_AFN */ = {
+		99561CEC1D2CACA800FD9A42 /* FJFNetWorkManager */ = {
 			isa = PBXGroup;
 			children = (
-				995C4A441D21246800853C46 /* HttpRequest_AFN.h */,
-				995C4A461D21246800853C46 /* HttpRequest_AFN.m */,
+				99561CED1D2CACA800FD9A42 /* FJFNetWorkManager.h */,
+				99561CEF1D2CACA800FD9A42 /* FJFNetWorkManager.m */,
+				99561CF61D2CACD300FD9A42 /* Singleton.h */,
 			);
-			path = HttpRequest_AFN;
+			path = FJFNetWorkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		995C4A401D21246800853C46 /* HttpRequest_AFN */ = {
+		99561CE91D2CACA800FD9A42 /* FJFNetWorkManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 995C4A4A1D21246800853C46 /* Build configuration list for PBXNativeTarget "HttpRequest_AFN" */;
+			buildConfigurationList = 99561CF31D2CACA800FD9A42 /* Build configuration list for PBXNativeTarget "FJFNetWorkManager" */;
 			buildPhases = (
-				995C4A3D1D21246800853C46 /* Sources */,
-				995C4A3E1D21246800853C46 /* Frameworks */,
-				995C4A3F1D21246800853C46 /* CopyFiles */,
+				99561CE61D2CACA800FD9A42 /* Sources */,
+				99561CE71D2CACA800FD9A42 /* Frameworks */,
+				99561CE81D2CACA800FD9A42 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HttpRequest_AFN;
-			productName = HttpRequest_AFN;
-			productReference = 995C4A411D21246800853C46 /* libHttpRequest_AFN.a */;
+			name = FJFNetWorkManager;
+			productName = FJFNetWorkManager;
+			productReference = 99561CEA1D2CACA800FD9A42 /* libFJFNetWorkManager.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		995C4A391D21246800853C46 /* Project object */ = {
+		99561CE21D2CACA700FD9A42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = sonasona;
+				ORGANIZATIONNAME = FJF;
 				TargetAttributes = {
-					995C4A401D21246800853C46 = {
+					99561CE91D2CACA800FD9A42 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 6WA7K389A4;
 					};
 				};
 			};
-			buildConfigurationList = 995C4A3C1D21246800853C46 /* Build configuration list for PBXProject "HttpRequest_AFN" */;
+			buildConfigurationList = 99561CE51D2CACA700FD9A42 /* Build configuration list for PBXProject "FJFNetWorkManager" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 995C4A381D21246800853C46;
-			productRefGroup = 995C4A421D21246800853C46 /* Products */;
+			mainGroup = 99561CE11D2CACA700FD9A42;
+			productRefGroup = 99561CEB1D2CACA800FD9A42 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				995C4A401D21246800853C46 /* HttpRequest_AFN */,
+				99561CE91D2CACA800FD9A42 /* FJFNetWorkManager */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		995C4A3D1D21246800853C46 /* Sources */ = {
+		99561CE61D2CACA800FD9A42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				995C4A471D21246800853C46 /* HttpRequest_AFN.m in Sources */,
+				99561CF01D2CACA800FD9A42 /* FJFNetWorkManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		995C4A481D21246800853C46 /* Debug */ = {
+		99561CF11D2CACA800FD9A42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -178,7 +176,7 @@
 			};
 			name = Debug;
 		};
-		995C4A491D21246800853C46 /* Release */ = {
+		99561CF21D2CACA800FD9A42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +214,7 @@
 			};
 			name = Release;
 		};
-		995C4A4B1D21246800853C46 /* Debug */ = {
+		99561CF41D2CACA800FD9A42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
@@ -225,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		995C4A4C1D21246800853C46 /* Release */ = {
+		99561CF51D2CACA800FD9A42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
@@ -237,25 +235,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		995C4A3C1D21246800853C46 /* Build configuration list for PBXProject "HttpRequest_AFN" */ = {
+		99561CE51D2CACA700FD9A42 /* Build configuration list for PBXProject "FJFNetWorkManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				995C4A481D21246800853C46 /* Debug */,
-				995C4A491D21246800853C46 /* Release */,
+				99561CF11D2CACA800FD9A42 /* Debug */,
+				99561CF21D2CACA800FD9A42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		995C4A4A1D21246800853C46 /* Build configuration list for PBXNativeTarget "HttpRequest_AFN" */ = {
+		99561CF31D2CACA800FD9A42 /* Build configuration list for PBXNativeTarget "FJFNetWorkManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				995C4A4B1D21246800853C46 /* Debug */,
-				995C4A4C1D21246800853C46 /* Release */,
+				99561CF41D2CACA800FD9A42 /* Debug */,
+				99561CF51D2CACA800FD9A42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 995C4A391D21246800853C46 /* Project object */;
+	rootObject = 99561CE21D2CACA700FD9A42 /* Project object */;
 }
