@@ -176,6 +176,154 @@ single_implementation(FJFNetWorkManager)
     
 }
 
+/**
+ * 上传单张图片
+ */
++(void)requestAFURL:(NSString *)URLString
+         parameters:(id)parameters
+          imageData:(NSData *)imageData
+            succeed:(void (^)(id))succeed
+            failure:(void (^)(NSError *))failure
+{
+//    // 0.设置API地址
+//    URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+//    DNSLog(@"\n POST上传单张图片参数列表:%@\n\n%@\n",parameters,[AFNManagerRequest URLEncryOrDecryString:parameters IsHead:false]);
+    
+    // 1.创建请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    // 2.申明返回的结果是二进制类型
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    // 3.如果报接受类型不一致请替换一致text/html  或者 text/plain
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+    
+    // 4.请求超时，时间设置
+    manager.requestSerializer.timeoutInterval = 30;
+    
+    // 5. POST数据
+    [manager POST:URLString  parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        
+        // 在网络开发中，上传文件时，是文件不允许被覆盖，文件重名
+        // 要解决此问题，
+        // 可以在上传时使用当前的系统事件作为文件名
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMddHHmmss";   // 设置时间格式
+        NSString *str = [formatter stringFromDate:[NSDate date]];
+        NSString *fileName = [NSString stringWithFormat:@"%@.png", str];
+        
+        //将得到的二进制图片拼接到表单中 /** data,指定上传的二进制流;name,服务器端所需参数名*/
+        [formData appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/png"];
+        
+    }progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        failure(error);
+    }];
+}
+
+
+/**
+ * 上传多张图片
+ */
++(void)requestAFURL:(NSString *)URLString
+         parameters:(id)parameters
+     imageDataArray:(NSArray *)imageDataArray
+            succeed:(void (^)(id))succeed
+            failure:(void (^)(NSError *))failure
+{
+    // 1.创建请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    // 2.申明返回的结果是二进制类型
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    // 3.如果报接受类型不一致请替换一致text/html  或者 text/plain
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+    
+    // 4.请求超时，时间设置
+    manager.requestSerializer.timeoutInterval = 30;
+    
+    // 5. POST数据
+    [manager POST:URLString  parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        
+        for (int i = 0; i<imageDataArray.count; i++){
+            
+            NSData *imageData = imageDataArray[i];
+            
+            // 在网络开发中，上传文件时，是文件不允许被覆盖，文件重名
+            // 要解决此问题，
+            // 可以在上传时使用当前的系统事件作为文件名
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            // 设置时间格式
+            formatter.dateFormat = @"yyyyMMddHHmmss";
+            NSString *str = [formatter stringFromDate:[NSDate date]];
+            NSString *fileName = [NSString stringWithFormat:@"%@.png", str];
+            NSString *name = [NSString stringWithFormat:@"image_%d.png",i ];
+            
+            //将得到的二进制图片拼接到表单中 /** data,指定上传的二进制流;name,服务器端所需参数名*/
+            [formData appendPartWithFileData:imageData name:name fileName:fileName mimeType:@"image/png"];
+        }
+        
+    }progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        failure(error);
+    }];
+}
+
+
+/**
+ * 上传文件
+ */
++(void)requestAFURL:(NSString *)URLString
+         parameters:(id)parameters
+           fileData:(NSData *)fileData
+            succeed:(void (^)(id))succeed
+            failure:(void (^)(NSError *))failure
+{
+    // 0.设置API地址
+//    URLString = [NSString stringWithFormat:@"%@%@",BASE_URL,[URLString stringByReplacingOccurrencesOfString:@" " withString:@"%20"]];
+//    
+//    DNSLog(@"\n POST上传文件参数列表:%@\n\n%@\n",parameters,[Utilit URLEncryOrDecryString:parameters IsHead:false]);
+    
+    // 1.创建请求管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    // 2.申明返回的结果是二进制类型
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    // 3.如果报接受类型不一致请替换一致text/html  或者 text/plain
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html",@"text/plain", nil];
+    
+    // 4.请求超时，时间设置
+    manager.requestSerializer.timeoutInterval = 30;
+    
+    // 5. POST数据
+    [manager POST:URLString  parameters:parameters  constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        
+        //将得到的二进制数据拼接到表单中 /** data,指定上传的二进制流;name,服务器端所需参数名*/
+        [formData appendPartWithFileData :fileData name:@"file" fileName:@"audio.MP3" mimeType:@"audio/MP3"];
+        
+    }progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSString *responseStr =  [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        failure(error);
+    }];
+}
+
 
 #pragma mark - tool
 -(NSString *)getBodyStringWithDict:(NSDictionary *)bodyDict{

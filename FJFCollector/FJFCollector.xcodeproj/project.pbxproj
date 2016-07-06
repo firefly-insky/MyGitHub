@@ -48,6 +48,7 @@
 		99561CFC1D2CCA5B00FD9A42 /* FJFNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFNetWorkManager.h; sourceTree = "<group>"; };
 		99561CFD1D2CCA5B00FD9A42 /* FJFNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFNetWorkManager.m; sourceTree = "<group>"; };
 		99561CFF1D2CCA7100FD9A42 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		99561D001D2CEAC600FD9A42 /* FJFQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FJFQRCode.h; path = FJFQRCode/FJFQRCode/FJFQRCode.h; sourceTree = "<group>"; };
 		995C4A021D2122DF00853C46 /* FJFCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FJFCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995C4A061D2122DF00853C46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		995C4A081D2122DF00853C46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +126,7 @@
 		995C49F91D2122DF00853C46 = {
 			isa = PBXGroup;
 			children = (
+				99561D001D2CEAC600FD9A42 /* FJFQRCode.h */,
 				995C4A041D2122DF00853C46 /* FJFCollector */,
 				995C4A1E1D2122DF00853C46 /* FJFCollectorTests */,
 				995C4A291D2122DF00853C46 /* FJFCollectorUITests */,
