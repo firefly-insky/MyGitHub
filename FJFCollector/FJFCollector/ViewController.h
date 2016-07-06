@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property(nonatomic,copy)void ((^QRCodeResultBlock)(NSArray *resultArray));
 
 @end
 

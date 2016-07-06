@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		99561CEE1D2CACA800FD9A42 /* FJFNetWorkManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 99561CED1D2CACA800FD9A42 /* FJFNetWorkManager.h */; };
 		99561CF01D2CACA800FD9A42 /* FJFNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99561CEF1D2CACA800FD9A42 /* FJFNetWorkManager.m */; };
+		99561CFA1D2CB1F900FD9A42 /* libPods-FJFCollector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99561CF91D2CB1F900FD9A42 /* libPods-FJFCollector.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,7 @@
 		99561CED1D2CACA800FD9A42 /* FJFNetWorkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FJFNetWorkManager.h; sourceTree = "<group>"; };
 		99561CEF1D2CACA800FD9A42 /* FJFNetWorkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FJFNetWorkManager.m; sourceTree = "<group>"; };
 		99561CF61D2CACD300FD9A42 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		99561CF91D2CB1F900FD9A42 /* libPods-FJFCollector.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-FJFCollector.a"; path = "/Users/sonasona/Desktop/MyWorkSpace/MyGitHub/FJFCollector/Pods/../build/Debug-iphoneos/libPods-FJFCollector.a"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99561CFA1D2CB1F900FD9A42 /* libPods-FJFCollector.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 		99561CE11D2CACA700FD9A42 = {
 			isa = PBXGroup;
 			children = (
+				99561CF91D2CB1F900FD9A42 /* libPods-FJFCollector.a */,
 				99561CEC1D2CACA800FD9A42 /* FJFNetWorkManager */,
 				99561CEB1D2CACA800FD9A42 /* Products */,
 			);
@@ -217,7 +221,12 @@
 		99561CF41D2CACA800FD9A42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/AFNetworking\"";
+				LIBRARY_SEARCH_PATHS = "\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"AFNetworking\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -226,7 +235,12 @@
 		99561CF51D2CACA800FD9A42 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers/Public/AFNetworking\"";
+				LIBRARY_SEARCH_PATHS = "\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"AFNetworking\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};

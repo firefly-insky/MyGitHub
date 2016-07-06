@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AFNetworking.h>
 #import "FJFQRCode.h"
+#import <AFNetworking.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *backView;
@@ -26,16 +27,16 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
      [self beginAnimation];
-}
-
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
     [[FJFQRCode sharedFJFQRCode] setRectInterest:self.backView.frame];
     
     [[FJFQRCode sharedFJFQRCode] scanQRCodeWithinView:self.view isDrawQRCodeFrame:YES scanResult:^(NSArray *array) {
         NSArray *scanresult = array;
-        NSLog(@"%@",array);
         [[FJFQRCode sharedFJFQRCode] stopScan];
-        
+        [self dismissViewControllerAnimated:YES completion:^{
+            if(self.QRCodeResultBlock)
+               self.QRCodeResultBlock(scanresult);
+        }];
     }];
 }
 
@@ -43,9 +44,7 @@
     
     self.bottomCon.constant = self.backView.frame.size.height;
     [self.view layoutIfNeeded];
-    
     self.bottomCon.constant = -self.backView.frame.size.height;
-    
     [UIView animateWithDuration:2.0 animations:^{
         [UIView setAnimationRepeatCount:MAXFLOAT];
         [self.view layoutIfNeeded];

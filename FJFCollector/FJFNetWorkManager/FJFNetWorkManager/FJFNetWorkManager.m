@@ -7,6 +7,7 @@
 //
 
 #import "FJFNetWorkManager.h"
+#import <AFNetworking.h>
 
 @implementation FJFNetWorkManager
 

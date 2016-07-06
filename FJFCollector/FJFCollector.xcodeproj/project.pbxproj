@@ -10,6 +10,7 @@
 		8218A8EE0CF2F6EE1BBDB3B7 /* libPods-FJFCollector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 267D165949F3F6F62C873707 /* libPods-FJFCollector.a */; };
 		99561CDF1D2CA98300FD9A42 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99561CDD1D2CA98300FD9A42 /* mainViewController.m */; };
 		99561CE01D2CA98300FD9A42 /* mainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99561CDE1D2CA98300FD9A42 /* mainViewController.xib */; };
+		99561CFE1D2CCA5B00FD9A42 /* FJFNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99561CFD1D2CCA5B00FD9A42 /* FJFNetWorkManager.m */; };
 		995C4A071D2122DF00853C46 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 995C4A061D2122DF00853C46 /* main.m */; };
 		995C4A0A1D2122DF00853C46 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 995C4A091D2122DF00853C46 /* AppDelegate.m */; };
 		995C4A0D1D2122DF00853C46 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 995C4A0C1D2122DF00853C46 /* ViewController.m */; };
@@ -44,6 +45,9 @@
 		99561CDC1D2CA98300FD9A42 /* mainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainViewController.h; sourceTree = "<group>"; };
 		99561CDD1D2CA98300FD9A42 /* mainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainViewController.m; sourceTree = "<group>"; };
 		99561CDE1D2CA98300FD9A42 /* mainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mainViewController.xib; sourceTree = "<group>"; };
+		99561CFC1D2CCA5B00FD9A42 /* FJFNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFNetWorkManager.h; sourceTree = "<group>"; };
+		99561CFD1D2CCA5B00FD9A42 /* FJFNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFNetWorkManager.m; sourceTree = "<group>"; };
+		99561CFF1D2CCA7100FD9A42 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		995C4A021D2122DF00853C46 /* FJFCollector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FJFCollector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		995C4A061D2122DF00853C46 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		995C4A081D2122DF00853C46 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		99561CFB1D2CC97600FD9A42 /* FJFNetworkmanager */ = {
+			isa = PBXGroup;
+			children = (
+				99561CFC1D2CCA5B00FD9A42 /* FJFNetWorkManager.h */,
+				99561CFD1D2CCA5B00FD9A42 /* FJFNetWorkManager.m */,
+			);
+			path = FJFNetworkmanager;
+			sourceTree = "<group>";
+		};
 		995C49F91D2122DF00853C46 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +147,8 @@
 		995C4A041D2122DF00853C46 /* FJFCollector */ = {
 			isa = PBXGroup;
 			children = (
+				99561CFF1D2CCA7100FD9A42 /* Singleton.h */,
+				99561CFB1D2CC97600FD9A42 /* FJFNetworkmanager */,
 				995C4A081D2122DF00853C46 /* AppDelegate.h */,
 				995C4A091D2122DF00853C46 /* AppDelegate.m */,
 				995C4A0B1D2122DF00853C46 /* ViewController.h */,
@@ -363,6 +378,7 @@
 				995C4A0D1D2122DF00853C46 /* ViewController.m in Sources */,
 				995C4A0A1D2122DF00853C46 /* AppDelegate.m in Sources */,
 				995C4A071D2122DF00853C46 /* main.m in Sources */,
+				99561CFE1D2CCA5B00FD9A42 /* FJFNetWorkManager.m in Sources */,
 				99561CDF1D2CA98300FD9A42 /* mainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

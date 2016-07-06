@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
 
+
 @interface FJFNetWorkManager : NSObject
 single_interface(FJFNetWorkManager)
 
