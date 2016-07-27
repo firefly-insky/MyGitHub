@@ -7,7 +7,7 @@
 //
 
 #import "FJFFileHandle.h"
-#import "NSString+FJFFileExtension.h"
+
 
 @interface FJFFileHandle()
 
@@ -47,7 +47,7 @@
         [manager createDirectoryAtPath:cacheFolderPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     NSString *cacheFilePath = [NSString stringWithFormat:@"%@/%@",cacheFolderPath,name];
-    BOOL state = [[NSFileManager defaultManager] copyItemAtURL:[NSURL URLWithString:[NSString tempFilePath]] toURL:[NSURL URLWithString:cacheFilePath] error:nil];
+    BOOL state = [[NSFileManager defaultManager] copyItemAtPath:[NSString tempFilePath] toPath:cacheFilePath error:nil];
     NSLog(@"%@",state?@"保存成功":@"保存失败");
 }
 

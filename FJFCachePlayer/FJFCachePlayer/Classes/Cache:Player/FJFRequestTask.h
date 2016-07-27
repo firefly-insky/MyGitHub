@@ -7,12 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
+@class FJFFileHandle;
+
+
+@protocol FJFRequestTaskDelegate <NSObject>
+
+@required
+- (void)requestTaskDidUpdateCache; //更新缓冲进度代理方法
+@optional
+- (void)requestTaskDidReceiveResponse;
+- (void)requestTaskDidFinishLoadingWithCache:(BOOL)cache;
+- (void)requestTaskDidFailWithError:(NSError *)error;
+@end
 
 @interface FJFRequestTask : NSObject
 /**
  *  请求地址
  */
-@property(nonatomic,strong)NSURL * requestURl;
+@property(nonatomic,strong)NSURL * requestURL;
 /**
  *  请求起始位置
  */
@@ -35,4 +47,8 @@
 @property(nonatomic,assign)BOOL  cancelTask;
 
 
+@property(nonatomic,weak)id<FJFRequestTaskDelegate>  delegate;
+
+
+-(void)startTask;
 @end

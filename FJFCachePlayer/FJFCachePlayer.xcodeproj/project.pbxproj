@@ -18,6 +18,10 @@
 		30DE00421D48837A003D3B1B /* FJFRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00411D48837A003D3B1B /* FJFRequestTask.m */; };
 		30DE00451D488850003D3B1B /* FJFFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00441D488850003D3B1B /* FJFFileHandle.m */; };
 		30DE00481D488BAA003D3B1B /* NSString+FJFFileExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00471D488BAA003D3B1B /* NSString+FJFFileExtension.m */; };
+		30DE004B1D48A1F0003D3B1B /* NSURL+FJFScheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE004A1D48A1F0003D3B1B /* NSURL+FJFScheme.m */; };
+		30DE004E1D48A466003D3B1B /* FJFPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE004D1D48A466003D3B1B /* FJFPlayer.m */; };
+		30DE00511D48A953003D3B1B /* FJFResourceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00501D48A953003D3B1B /* FJFResourceLoader.m */; };
+		30DE00541D48B7B4003D3B1B /* SONARC4Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00531D48B7B4003D3B1B /* SONARC4Tool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,14 @@
 		30DE00441D488850003D3B1B /* FJFFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFFileHandle.m; sourceTree = "<group>"; };
 		30DE00461D488BAA003D3B1B /* NSString+FJFFileExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FJFFileExtension.h"; sourceTree = "<group>"; };
 		30DE00471D488BAA003D3B1B /* NSString+FJFFileExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FJFFileExtension.m"; sourceTree = "<group>"; };
+		30DE00491D48A1F0003D3B1B /* NSURL+FJFScheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+FJFScheme.h"; sourceTree = "<group>"; };
+		30DE004A1D48A1F0003D3B1B /* NSURL+FJFScheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+FJFScheme.m"; sourceTree = "<group>"; };
+		30DE004C1D48A466003D3B1B /* FJFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFPlayer.h; sourceTree = "<group>"; };
+		30DE004D1D48A466003D3B1B /* FJFPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFPlayer.m; sourceTree = "<group>"; };
+		30DE004F1D48A953003D3B1B /* FJFResourceLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFResourceLoader.h; sourceTree = "<group>"; };
+		30DE00501D48A953003D3B1B /* FJFResourceLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFResourceLoader.m; sourceTree = "<group>"; };
+		30DE00521D48B7B4003D3B1B /* SONARC4Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SONARC4Tool.h; sourceTree = "<group>"; };
+		30DE00531D48B7B4003D3B1B /* SONARC4Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SONARC4Tool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,10 +164,16 @@
 		30DE003E1D488173003D3B1B /* Cache/Player */ = {
 			isa = PBXGroup;
 			children = (
+				30DE00521D48B7B4003D3B1B /* SONARC4Tool.h */,
+				30DE00531D48B7B4003D3B1B /* SONARC4Tool.m */,
 				30DE00401D48837A003D3B1B /* FJFRequestTask.h */,
 				30DE00411D48837A003D3B1B /* FJFRequestTask.m */,
 				30DE00431D488850003D3B1B /* FJFFileHandle.h */,
 				30DE00441D488850003D3B1B /* FJFFileHandle.m */,
+				30DE004C1D48A466003D3B1B /* FJFPlayer.h */,
+				30DE004D1D48A466003D3B1B /* FJFPlayer.m */,
+				30DE004F1D48A953003D3B1B /* FJFResourceLoader.h */,
+				30DE00501D48A953003D3B1B /* FJFResourceLoader.m */,
 			);
 			name = Cache/Player;
 			path = "Cache:Player";
@@ -166,6 +184,8 @@
 			children = (
 				30DE00461D488BAA003D3B1B /* NSString+FJFFileExtension.h */,
 				30DE00471D488BAA003D3B1B /* NSString+FJFFileExtension.m */,
+				30DE00491D48A1F0003D3B1B /* NSURL+FJFScheme.h */,
+				30DE004A1D48A1F0003D3B1B /* NSURL+FJFScheme.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -313,10 +333,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				30DE00121D4880DF003D3B1B /* ViewController.m in Sources */,
+				30DE00511D48A953003D3B1B /* FJFResourceLoader.m in Sources */,
+				30DE004E1D48A466003D3B1B /* FJFPlayer.m in Sources */,
 				30DE00421D48837A003D3B1B /* FJFRequestTask.m in Sources */,
 				30DE000F1D4880DF003D3B1B /* AppDelegate.m in Sources */,
 				30DE00451D488850003D3B1B /* FJFFileHandle.m in Sources */,
+				30DE00541D48B7B4003D3B1B /* SONARC4Tool.m in Sources */,
 				30DE00481D488BAA003D3B1B /* NSString+FJFFileExtension.m in Sources */,
+				30DE004B1D48A1F0003D3B1B /* NSURL+FJFScheme.m in Sources */,
 				30DE000C1D4880DF003D3B1B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

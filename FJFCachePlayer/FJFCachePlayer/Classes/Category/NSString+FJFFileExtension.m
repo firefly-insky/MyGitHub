@@ -16,10 +16,13 @@
 }
 
 +(NSString *)cacheFolderPath{
+   
     return [[NSHomeDirectory() stringByAppendingPathComponent:@"Library"] stringByAppendingPathComponent:@"MusicCache"];
 }
 
 +(NSString *)fileNameWithUrl:(NSURL *)url{
-    return [[url.path componentsSeparatedByString:@"/"] lastObject];
+    
+//    return [[url.path componentsSeparatedByString:@"/"] lastObject];
+    return @"xpqh.mp3";
 }
 @end
