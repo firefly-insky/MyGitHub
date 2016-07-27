@@ -17,6 +17,7 @@
 		30DE00301D4880DF003D3B1B /* FJFCachePlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE002F1D4880DF003D3B1B /* FJFCachePlayerUITests.m */; };
 		30DE00421D48837A003D3B1B /* FJFRequestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00411D48837A003D3B1B /* FJFRequestTask.m */; };
 		30DE00451D488850003D3B1B /* FJFFileHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00441D488850003D3B1B /* FJFFileHandle.m */; };
+		30DE00481D488BAA003D3B1B /* NSString+FJFFileExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00471D488BAA003D3B1B /* NSString+FJFFileExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		30DE00411D48837A003D3B1B /* FJFRequestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFRequestTask.m; sourceTree = "<group>"; };
 		30DE00431D488850003D3B1B /* FJFFileHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFFileHandle.h; sourceTree = "<group>"; };
 		30DE00441D488850003D3B1B /* FJFFileHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJFFileHandle.m; sourceTree = "<group>"; };
+		30DE00461D488BAA003D3B1B /* NSString+FJFFileExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FJFFileExtension.h"; sourceTree = "<group>"; };
+		30DE00471D488BAA003D3B1B /* NSString+FJFFileExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FJFFileExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 		30DE003F1D488173003D3B1B /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				30DE00461D488BAA003D3B1B /* NSString+FJFFileExtension.h */,
+				30DE00471D488BAA003D3B1B /* NSString+FJFFileExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -242,7 +247,6 @@
 				TargetAttributes = {
 					30DE00061D4880DF003D3B1B = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 6WA7K389A4;
 					};
 					30DE001F1D4880DF003D3B1B = {
 						CreatedOnToolsVersion = 7.3;
@@ -312,6 +316,7 @@
 				30DE00421D48837A003D3B1B /* FJFRequestTask.m in Sources */,
 				30DE000F1D4880DF003D3B1B /* AppDelegate.m in Sources */,
 				30DE00451D488850003D3B1B /* FJFFileHandle.m in Sources */,
+				30DE00481D488BAA003D3B1B /* NSString+FJFFileExtension.m in Sources */,
 				30DE000C1D4880DF003D3B1B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,7 +458,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FJFCachePlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FJF.FJFCachePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,7 +471,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FJFCachePlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FJF.FJFCachePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,6 +545,7 @@
 				30DE00361D4880DF003D3B1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30DE00371D4880DF003D3B1B /* Build configuration list for PBXNativeTarget "FJFCachePlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +554,7 @@
 				30DE00391D4880DF003D3B1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30DE003A1D4880DF003D3B1B /* Build configuration list for PBXNativeTarget "FJFCachePlayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +563,7 @@
 				30DE003C1D4880DF003D3B1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

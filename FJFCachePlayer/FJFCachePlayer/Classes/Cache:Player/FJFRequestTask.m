@@ -7,6 +7,7 @@
 //
 
 #import "FJFRequestTask.h"
+#import "FJFFileHandle.h"
 
 //请求超时
 #define RequestTimeout 10.0
@@ -19,5 +20,14 @@
 @end
 
 @implementation FJFRequestTask
+
+-(instancetype)init{
+    if(self = [super init]){
+        [FJFFileHandle createTempFile];
+    }
+    return self;
+}
+
+
 
 @end
