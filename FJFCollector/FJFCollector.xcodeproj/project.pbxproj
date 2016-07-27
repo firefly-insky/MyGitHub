@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30CEE6381D3326950041D125 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CEE6371D3326950041D125 /* Reachability.m */; };
 		8218A8EE0CF2F6EE1BBDB3B7 /* libPods-FJFCollector.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 267D165949F3F6F62C873707 /* libPods-FJFCollector.a */; };
 		99561CDF1D2CA98300FD9A42 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99561CDD1D2CA98300FD9A42 /* mainViewController.m */; };
 		99561CE01D2CA98300FD9A42 /* mainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99561CDE1D2CA98300FD9A42 /* mainViewController.xib */; };
@@ -41,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		267D165949F3F6F62C873707 /* libPods-FJFCollector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FJFCollector.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30CEE6361D3326950041D125 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		30CEE6371D3326950041D125 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		7C2B85CC926F997FDB8D91FC /* Pods-FJFCollector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FJFCollector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FJFCollector/Pods-FJFCollector.debug.xcconfig"; sourceTree = "<group>"; };
 		99561CDC1D2CA98300FD9A42 /* mainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainViewController.h; sourceTree = "<group>"; };
 		99561CDD1D2CA98300FD9A42 /* mainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainViewController.m; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 		99561CFB1D2CC97600FD9A42 /* FJFNetworkmanager */ = {
 			isa = PBXGroup;
 			children = (
+				30CEE6361D3326950041D125 /* Reachability.h */,
+				30CEE6371D3326950041D125 /* Reachability.m */,
 				99561CFC1D2CCA5B00FD9A42 /* FJFNetWorkManager.h */,
 				99561CFD1D2CCA5B00FD9A42 /* FJFNetWorkManager.m */,
 			);
@@ -381,6 +386,7 @@
 				995C4A0A1D2122DF00853C46 /* AppDelegate.m in Sources */,
 				995C4A071D2122DF00853C46 /* main.m in Sources */,
 				99561CFE1D2CCA5B00FD9A42 /* FJFNetWorkManager.m in Sources */,
+				30CEE6381D3326950041D125 /* Reachability.m in Sources */,
 				99561CDF1D2CA98300FD9A42 /* mainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

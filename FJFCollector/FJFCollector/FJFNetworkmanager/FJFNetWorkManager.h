@@ -10,6 +10,15 @@
 #import "Singleton.h"
 #import <AFNetworking.h>
 
+typedef NS_ENUM(NSUInteger, NetworkStates) {
+    NetworkStatesNone, // 没有网络
+    NetworkStates2G, // 2G
+    NetworkStates3G, // 3G
+    NetworkStates4G, // 4G
+    NetworkStatesWIFI // WIFI
+};
+
+
 typedef enum : NSUInteger {
     requestMethod_GET=0,
     requestMethod_POST=1,
@@ -17,7 +26,8 @@ typedef enum : NSUInteger {
 
 @interface FJFNetWorkManager : NSObject
 single_interface(FJFNetWorkManager)
-
+// 判断网络类型
++ (NetworkStates)getNetworkStates;
 /**
  *  苹果原生的NSURLSession的GET请求
  */
