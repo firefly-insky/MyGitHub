@@ -11,6 +11,7 @@
 #import "FJFResourceLoader.h"
 #import "NSURL+FJFScheme.h"
 #import "SONARC4Tool.h"
+#import "NSData+FJFData.h"
 
 @interface FJFPlayer()<FJFLoaderDelegate>
 
@@ -39,26 +40,8 @@
 
         NSMutableData *musicData = [NSMutableData dataWithContentsOfFile:cachePath];
     
-//        
-        Byte *buff = (Byte *)malloc(256);
-        NSInteger loc = 0;
-        NSInteger len = 32;
-        NSInteger partlen = 256;
-        NSData *tempdata = musicData;
-        NSInteger totallen = musicData.length;
-        NSArray *key= [[SONARC4Tool initRC4Key:@"SONA1234567890acdefg"] mutableCopy];
-        
-        while (loc < tempdata.length-1) {
-            if(totallen-1-loc <= len){
-                len = totallen-1-loc;
-            }
-            [musicData getBytes:buff range:NSMakeRange(loc, len)];
-            Byte *subData = [SONARC4Tool EncodeRC4WithByte:buff len:len Key:key];
-            [musicData replaceBytesInRange:NSMakeRange(loc, len) withBytes:subData];
-            loc +=partlen;
-        }
+         musicData = [musicData RC4Decode];
         [musicData writeToFile:cachePath atomically:YES];
-        
         
         self.currentItem = [AVPlayerItem playerItemWithURL:playUrl];
         NSLog(@"****播放缓存文件****");
@@ -89,5 +72,9 @@
     
 }
 
++ (BOOL)clearCache {
+    [FJFFileHandle clearCache];
+    return YES;
+}
 
 @end

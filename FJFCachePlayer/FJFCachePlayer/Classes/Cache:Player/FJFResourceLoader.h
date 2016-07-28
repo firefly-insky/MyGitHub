@@ -10,7 +10,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "FJFRequestTask.h"
 @class FJFResourceLoader;
-#define MimeType @"audio/m4a"
+//#define MimeType @"audio/m4a"
+#define MimeType @"audio/mpeg"
 
 @class FJFResourceLoader;
 @protocol FJFLoaderDelegate <NSObject>

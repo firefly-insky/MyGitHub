@@ -17,12 +17,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6C-Xk-f8U">
-                                <rect key="frame" x="205" y="125" width="46" height="30"/>
+                                <rect key="frame" x="212" y="134" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4G-mL-l2S">
+                                <rect key="frame" x="217" y="349" width="37" height="30"/>
+                                <state key="normal" title="clean"/>
+                                <connections>
+                                    <action selector="clean:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LYM-47-HWe"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7t-EL-IJJ">
-                                <rect key="frame" x="205" y="250" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="212" y="250" width="46" height="30"/>
+                                <state key="normal" title="play"/>
                                 <connections>
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0iu-0s-CkB"/>
                                 </connections>

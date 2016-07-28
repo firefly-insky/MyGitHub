@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AEAA371D49DD0F00DB103E /* NSData+FJFData.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AEAA361D49DD0F00DB103E /* NSData+FJFData.m */; };
 		30DE000C1D4880DF003D3B1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE000B1D4880DF003D3B1B /* main.m */; };
 		30DE000F1D4880DF003D3B1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE000E1D4880DF003D3B1B /* AppDelegate.m */; };
 		30DE00121D4880DF003D3B1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DE00111D4880DF003D3B1B /* ViewController.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30AEAA351D49DD0F00DB103E /* NSData+FJFData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+FJFData.h"; sourceTree = "<group>"; };
+		30AEAA361D49DD0F00DB103E /* NSData+FJFData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+FJFData.m"; sourceTree = "<group>"; };
 		30DE00071D4880DF003D3B1B /* FJFCachePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FJFCachePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DE000B1D4880DF003D3B1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30DE000D1D4880DF003D3B1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 		30DE003F1D488173003D3B1B /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				30AEAA351D49DD0F00DB103E /* NSData+FJFData.h */,
+				30AEAA361D49DD0F00DB103E /* NSData+FJFData.m */,
 				30DE00461D488BAA003D3B1B /* NSString+FJFFileExtension.h */,
 				30DE00471D488BAA003D3B1B /* NSString+FJFFileExtension.m */,
 				30DE00491D48A1F0003D3B1B /* NSURL+FJFScheme.h */,
@@ -337,6 +342,7 @@
 				30DE004E1D48A466003D3B1B /* FJFPlayer.m in Sources */,
 				30DE00421D48837A003D3B1B /* FJFRequestTask.m in Sources */,
 				30DE000F1D4880DF003D3B1B /* AppDelegate.m in Sources */,
+				30AEAA371D49DD0F00DB103E /* NSData+FJFData.m in Sources */,
 				30DE00451D488850003D3B1B /* FJFFileHandle.m in Sources */,
 				30DE00541D48B7B4003D3B1B /* SONARC4Tool.m in Sources */,
 				30DE00481D488BAA003D3B1B /* NSString+FJFFileExtension.m in Sources */,

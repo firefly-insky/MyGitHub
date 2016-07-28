@@ -14,5 +14,6 @@
 -(instancetype)initWithUrl:(NSURL *)url;
 
 -(void)play;
++ (BOOL)clearCache;
 
 @end

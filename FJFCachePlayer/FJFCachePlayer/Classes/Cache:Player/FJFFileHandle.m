@@ -7,6 +7,7 @@
 //
 
 #import "FJFFileHandle.h"
+#import "NSData+FJFData.h"
 
 
 @interface FJFFileHandle()
@@ -46,6 +47,10 @@
     if(![manager fileExistsAtPath:cacheFolderPath]){
         [manager createDirectoryAtPath:cacheFolderPath withIntermediateDirectories:YES attributes:nil error:nil];
     }
+    //先RC4加密
+    NSData *data = [NSData dataWithContentsOfFile:[NSString tempFilePath]];
+    data = [[data mutableCopy] RC4Decode];
+    [data writeToFile:[NSString tempFilePath] atomically:YES];
     NSString *cacheFilePath = [NSString stringWithFormat:@"%@/%@",cacheFolderPath,name];
     BOOL state = [[NSFileManager defaultManager] copyItemAtPath:[NSString tempFilePath] toPath:cacheFilePath error:nil];
     NSLog(@"%@",state?@"保存成功":@"保存失败");

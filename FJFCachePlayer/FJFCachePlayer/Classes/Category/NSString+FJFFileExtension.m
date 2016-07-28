@@ -22,7 +22,8 @@
 
 +(NSString *)fileNameWithUrl:(NSURL *)url{
     
-//    return [[url.path componentsSeparatedByString:@"/"] lastObject];
-    return @"xpqh.mp3";
+    NSArray *urls =  [url.path componentsSeparatedByString:@"/"];
+    NSString *name = [urls.lastObject componentsSeparatedByString:@"?"].firstObject;
+    return name;
 }
 @end

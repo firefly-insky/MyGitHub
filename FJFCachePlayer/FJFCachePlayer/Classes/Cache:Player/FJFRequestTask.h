@@ -34,6 +34,10 @@
  */
 @property(nonatomic,assign)NSInteger fileLength;
 /**
+ *  文件总长度
+ */
+@property(nonatomic,assign)NSInteger totalLength;
+/**
  *  缓冲长度
  */
 @property(nonatomic,assign)NSInteger cacheLength;

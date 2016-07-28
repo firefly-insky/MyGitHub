@@ -26,5 +26,8 @@
     
     [self.player play];
 }
+- (IBAction)clean:(id)sender {
+    [FJFPlayer clearCache];
+}
 
 @end

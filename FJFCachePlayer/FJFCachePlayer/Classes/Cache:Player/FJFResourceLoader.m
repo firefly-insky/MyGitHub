@@ -9,6 +9,7 @@
 #import "FJFResourceLoader.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "FJFFileHandle.h"
+#import "NSData+FJFData.h"
 
 @interface FJFResourceLoader()
 
@@ -31,12 +32,12 @@
 
 #pragma mark - AVAssetResourceLoaderDelegate
 -(BOOL)resourceLoader:(AVAssetResourceLoader *)resourceLoader shouldWaitForLoadingOfRequestedResource:(AVAssetResourceLoadingRequest *)loadingRequest{
-    NSLog(@"WaitingLoadingRequest < requestedOffset = %lld, currentOffset = %lld, requestedLength = %ld >", loadingRequest.dataRequest.requestedOffset, loadingRequest.dataRequest.currentOffset, loadingRequest.dataRequest.requestedLength);
+//    NSLog(@"WaitingLoadingRequest < requestedOffset = %lld, currentOffset = %lld, requestedLength = %ld >", loadingRequest.dataRequest.requestedOffset, loadingRequest.dataRequest.currentOffset, loadingRequest.dataRequest.requestedLength);
     [self addLoadingRequest:loadingRequest];
     return YES;
 }
 - (void)resourceLoader:(AVAssetResourceLoader *)resourceLoader didCancelLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest {
-    NSLog(@"CancelLoadingRequest  < requestedOffset = %lld, currentOffset = %lld, requestedLength = %ld >", loadingRequest.dataRequest.requestedOffset, loadingRequest.dataRequest.currentOffset, loadingRequest.dataRequest.requestedLength);
+//    NSLog(@"CancelLoadingRequest  < requestedOffset = %lld, currentOffset = %lld, requestedLength = %ld >", loadingRequest.dataRequest.requestedOffset, loadingRequest.dataRequest.currentOffset, loadingRequest.dataRequest.requestedLength);
     [self removeLoadingRequest:loadingRequest];
 }
 
@@ -64,11 +65,10 @@
     [self.requestList addObject:loadingRequest];
     @synchronized(self) {
         if (self.requestTask) {
-            NSLog(@"***1=%zd,2=%zd,3=%zd***",loadingRequest.dataRequest.requestedOffset,self.requestTask.requestOffset , self.requestTask.cacheLength);
             if (loadingRequest.dataRequest.requestedOffset >= self.requestTask.requestOffset &&
                 loadingRequest.dataRequest.requestedOffset <= self.requestTask.requestOffset + self.requestTask.cacheLength) {
                 //数据已经缓存，则直接完成
-                NSLog(@"数据已经缓存，则直接完成");
+//                NSLog(@"数据已经缓存，则直接完成");
                 [self processRequestList];
             }else {
                 //数据还没缓存，则等待数据下载；如果是Seek操作，则重新请求
@@ -116,11 +116,14 @@
 }
 
 - (BOOL)finishLoadingWithLoadingRequest:(AVAssetResourceLoadingRequest *)loadingRequest {
+    
+    static NSInteger tempLength;
     //填充信息
     CFStringRef contentType = UTTypeCreatePreferredIdentifierForTag(kUTTagClassMIMEType, (__bridge CFStringRef)(MimeType), NULL);
     loadingRequest.contentInformationRequest.contentType = CFBridgingRelease(contentType);
     loadingRequest.contentInformationRequest.byteRangeAccessSupported = YES;
     loadingRequest.contentInformationRequest.contentLength = self.requestTask.fileLength;
+    
     
     //读文件，填充数据
     NSUInteger cacheLength = self.requestTask.cacheLength;
@@ -129,18 +132,20 @@
         requestedOffset = loadingRequest.dataRequest.currentOffset;
     }
     NSUInteger canReadLength = cacheLength - (requestedOffset - self.requestTask.requestOffset);
+    
     NSUInteger respondLength = MIN(canReadLength, loadingRequest.dataRequest.requestedLength);
     
-    //    NSLog(@"cacheLength %ld, requestedOffset %lld, currentOffset %lld, canReadLength %ld, requestedLength %ld", cacheLength, loadingRequest.dataRequest.requestedOffset, loadingRequest.dataRequest.currentOffset,canReadLength, loadingRequest.dataRequest.requestedLength);
+    NSData *respondData = [FJFFileHandle readTempFileWithOffset:requestedOffset - self.requestTask.requestOffset length:respondLength];
     
-    [loadingRequest.dataRequest respondWithData:[FJFFileHandle readTempFileWithOffset:requestedOffset - self.requestTask.requestOffset length:respondLength]];
-
+//    NSLog(@"返回长度：%zd,%zd",respondData.length,respondLength);
+    [loadingRequest.dataRequest respondWithData:respondData];
     
     //如果完全响应了所需要的数据，则完成
     NSUInteger nowendOffset = requestedOffset + canReadLength;
     NSUInteger reqEndOffset = loadingRequest.dataRequest.requestedOffset + loadingRequest.dataRequest.requestedLength;
     if (nowendOffset >= reqEndOffset) {
         [loadingRequest finishLoading];
+        tempLength = 0;
         return YES;
     }
     return NO;
